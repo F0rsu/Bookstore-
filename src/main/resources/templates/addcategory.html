@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Adding categories</title>
+</head>
+<body>
+<div class= "container" ></div>
+<h1>Add category</h1>
+<div class= "col -md-4">
+
+<form th:object="${category}" th:action="@{save-category}" action="#" method="post">
+ 
+ <label for="category">Category</label>
+ 	<input type= "text" id="name" th:field="*{name}" class="form-control"/>
+ 	
+ 
+	<div style="clear: both; display: block; height: 10px;"></div>
+	<input type = "submit" class="btn btn-primary" value= "Save"><input>
+
+
+
+
+</form>
+</div>
+</div>
+</body>
+</html>

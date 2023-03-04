@@ -55,7 +55,7 @@ public class BookController {
 	
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
 
-	public String save(Book book) {
+	public String saveBook(Book book) {
 		bookRepositery.save(book);
 		return "redirect:booklist";
 	}
