@@ -13,6 +13,8 @@ import SOF003AS3A.Bookstore.domain.Book;
 import SOF003AS3A.Bookstore.domain.BookRepositery;
 import SOF003AS3A.Bookstore.domain.Category;
 import SOF003AS3A.Bookstore.domain.CategoryRepositery;
+import SOF003AS3A.Bookstore.domain.User;
+import SOF003AS3A.Bookstore.domain.UserRepositery;
 
 
 
@@ -30,7 +32,7 @@ public class BookstoreApplication {
 
 
 	@Bean
-	public CommandLineRunner demoData (BookRepositery bookRepositery, CategoryRepositery categoryRepositery) {
+	public CommandLineRunner demoData (BookRepositery bookRepositery, CategoryRepositery categoryRepositery, UserRepositery userRepositery) {
 		return (arg) -> {
 			    
 	   	
@@ -45,8 +47,10 @@ public class BookstoreApplication {
 	         bookRepositery.save(new Book(0, "Joulumaa", "Joulupukki", 1832, "23344-12", 12.34, category2));
 				
 				
-				
-				
+	         User user1 = new User("user", "$2a$10$uK4W7azkha3kQ2Ys44/NPO8lqa6qm4.5eaPdqb/wryJA.vY0MP3Ry", "USER");
+				User user2 = new User("admin", "$2a$10$0hlacwZxQQGV4bbKp8avAe6BFEOtuteliAEZz2ghejXxSKQKwzO8i", "ADMIN");
+				userRepositery.save(user1);
+				userRepositery.save(user2);
 				
 				
 				
