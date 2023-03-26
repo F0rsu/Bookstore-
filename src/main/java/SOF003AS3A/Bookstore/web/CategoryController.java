@@ -69,7 +69,7 @@ public String addCategory(Model model) {
 
 public String saveCategory(Category category) {
 	categoryRepositery.save(category);
-	return "redirect:categorylist";
+	return "redirect:/categorylist";
 }
 
 }
